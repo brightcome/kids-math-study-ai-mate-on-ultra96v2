@@ -1,0 +1,6 @@
+/dk_files/obj/cam_image12.jpg
+/dk_files/obj/cam_image24.jpg
+/dk_files/obj/cam_image25.jpg
+/dk_files/obj/cam_image26.jpg
+/dk_files/obj/cam_image38.jpg
+/dk_files/obj/cam_image40.jpg

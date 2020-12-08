@@ -1,0 +1,5 @@
+classes= 6
+train  = /content/Vitis-In-Depth-Tutorial/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/dk_files/train_list.txt
+valid  = /content/Vitis-In-Depth-Tutorial/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/dk_files/valid_list.txt
+names = /content/Vitis-In-Depth-Tutorial/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/dk_files/obj.names
+backup = backup/
