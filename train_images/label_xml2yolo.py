@@ -1,9 +1,13 @@
 '''
 Liu Minglai
 12/11/2020 4:35:30 PM
-modify based on 
+modify based on
 https://github.com/AlexeyAB/darknet/blob/master/scripts/voc_label.py
 change to poker card image path style
+History:
+v00: initial version, the py scripts should be moved to image folders.
+v01: can process both train and valid
+v02: simplify the train/valid folder shift, add file list gen function.
 '''
 import xml.etree.ElementTree as ET
 import pickle
@@ -11,6 +15,9 @@ import os
 from os import listdir, getcwd
 from os.path import join
 import glob
+
+#image dataset definition
+sets=['train','test']
 
 #modify the class name as follow, expend to all 13 cards number
 classes = ["ace", "jack", "king", "nine", "queen", "ten"]
@@ -49,10 +56,15 @@ def convert_annotation(image_id):
         bb = convert((w,h), b)
         out_file.write(str(cls_id) + " " + " ".join([str(a) for a in bb]) + '\n')
 
+# convert the images in the "valid"&"valid" folder
+for image_set in sets:
+    list_file = open('%s_list.txt'%(image_set), 'w')
+    for image_id in glob.glob(image_set + '/*.jpg'):
+        image_file = image_id.split('.')[0]
+        print(image_file)
+        convert_annotation(image_file)
+        list_file.write(image_id + '\n')              #generate the image file list
+    list_file.close()
+    print(image_set, 'image convert done.')
 
-for image_id in glob.glob('*.jpg'):
-    image_file = image_id.split('.')[0]
-    print(image_file)
-    convert_annotation(image_file)
-
-print('done.')
+print('xml to yolo format convert done.')
