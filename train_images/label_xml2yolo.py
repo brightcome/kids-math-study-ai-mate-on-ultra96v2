@@ -8,6 +8,7 @@ History:
 v00: initial version, the py scripts should be moved to image folders.
 v01: can process both train and valid
 v02: simplify the train/valid folder shift, add file list gen function.
+v03: solve ".jpg"/"JPG" issue
 '''
 import xml.etree.ElementTree as ET
 import pickle
@@ -59,7 +60,7 @@ def convert_annotation(image_id):
 # convert the images in the "valid"&"valid" folder
 for image_set in sets:
     list_file = open('%s_list.txt'%(image_set), 'w')
-    for image_id in glob.glob(image_set + '/*.jpg'):
+    for image_id in glob.glob(image_set + '/*.[jJ][pP][gG]'): #check *.jpg/*.JPG
         image_file = image_id.split('.')[0]
         print(image_file)
         convert_annotation(image_file)
