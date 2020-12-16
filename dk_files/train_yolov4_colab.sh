@@ -14,8 +14,8 @@
 
 cd /content/darknet
 ./darknet detector train -map \
-/content/Vitis-In-Depth-Tutorial/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/dk_files/obj.data \
-/content/Vitis-In-Depth-Tutorial/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/dk_model/yolov4-leaky_poker.cfg \
-/content/Vitis-In-Depth-Tutorial/Machine_Learning/Design_Tutorials/07-yolov4-tutorial/dk_model/yolov4-leaky_best.weights \
+/content/kids-math-study-ai-mate-on-ultra96v2/dk_files/obj.data \
+/content/kids-math-study-ai-mate-on-ultra96v2/dk_model/yolov4-leaky_poker.cfg \
+/content/kids-math-study-ai-mate-on-ultra96v2/dk_model/yolov4-leaky_best.weights \
 -dont_show \
 -clear
