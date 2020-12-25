@@ -1,4 +1,3 @@
-  
 # Copyright 2020 Xilinx Inc.
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,5 +11,5 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-python ../keras-YOLOv3-model-set/tools/model_converter/convert.py --yolo4_reorder ../dk_model/yolov4-leaky.cfg ../dk_model/yolov4-leaky_best.weights ../keras_model/yolov4_leaky.h5
+python ../keras-YOLOv3-model-set/tools/model_converter/convert.py --yolo4_reorder ../dk_model/yolov4-leaky_poker.cfg ../dk_model/yolov4-leaky_poker_best.weights ../keras_model/yolov4_leaky.h5
 python ../keras-YOLOv3-model-set/tools/model_converter/keras_to_tensorflow.py --input_model ../keras_model/yolov4_leaky.h5 --output_model=../tf_model/tf_model.pb
